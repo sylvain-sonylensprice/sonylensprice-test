@@ -1,0 +1,154 @@
+[
+  {
+    "id": 1,
+    "name": "FE 24-70mm f/2.8 GM II",
+    "brand": "Sony",
+    "type": "zoom",
+    "aperture": "f/2.8",
+    "dxoScore": 34,
+    "newPrice": "2 299 €",
+    "newPriceVal": 2299,
+    "usedPrice": "1 850 €",
+    "usedPriceVal": 1850,
+    "url": "https://www.amazon.fr/s?k=Sony+FE+24-70mm+f2.8+GM+II",
+    "history": {
+      "1M": [2350, 2320, 2299],
+      "6M": [2499, 2450, 2390, 2299],
+      "1Y": [2599, 2499, 2390, 2299],
+      "ALL": [2699, 2599, 2499, 2299]
+    }
+  },
+  {
+    "id": 2,
+    "name": "24-70mm F2.8 DG DN | Art",
+    "brand": "Sigma",
+    "type": "zoom",
+    "aperture": "f/2.8",
+    "dxoScore": 33,
+    "newPrice": "1 199 €",
+    "newPriceVal": 1199,
+    "usedPrice": "900 €",
+    "usedPriceVal": 900,
+    "url": "https://www.amazon.fr/s?k=Sigma+24-70mm+F2.8+DG+DN+Art+Sony",
+    "history": {
+      "1M": [1220, 1210, 1199],
+      "6M": [1299, 1249, 1210, 1199],
+      "1Y": [1349, 1299, 1249, 1199],
+      "ALL": [1399, 1349, 1249, 1199]
+    }
+  },
+  {
+    "id": 3,
+    "name": "35mm f/1.4 DG DN | Art",
+    "brand": "Sigma",
+    "type": "prime",
+    "aperture": "f/1.4",
+    "dxoScore": 36,
+    "newPrice": "799 €",
+    "newPriceVal": 799,
+    "usedPrice": "620 €",
+    "usedPriceVal": 620,
+    "url": "https://www.amazon.fr/s?k=Sigma+35mm+f1.4+DG+DN+Art+Sony",
+    "history": {
+      "1M": [820, 810, 799],
+      "6M": [849, 829, 810, 799],
+      "1Y": [899, 849, 829, 799],
+      "ALL": [949, 899, 849, 799]
+    }
+  },
+  {
+    "id": 4,
+    "name": "28-75mm F/2.8 Di III VXD G2",
+    "brand": "Tamron",
+    "type": "zoom",
+    "aperture": "f/2.8",
+    "dxoScore": 32,
+    "newPrice": "849 €",
+    "newPriceVal": 849,
+    "usedPrice": "680 €",
+    "usedPriceVal": 680,
+    "url": "https://www.amazon.fr/s?k=Tamron+28-75mm+F2.8+Di+III+VXD+G2+Sony",
+    "history": {
+      "1M": [869, 855, 849],
+      "6M": [899, 879, 860, 849],
+      "1Y": [929, 899, 879, 849],
+      "ALL": [979, 929, 879, 849]
+    }
+  },
+  {
+    "id": 5,
+    "name": "FE 50mm f/1.2 GM",
+    "brand": "Sony",
+    "type": "prime",
+    "aperture": "f/1.2",
+    "dxoScore": 38,
+    "newPrice": "2 299 €",
+    "newPriceVal": 2299,
+    "usedPrice": "1 890 €",
+    "usedPriceVal": 1890,
+    "url": "https://www.amazon.fr/s?k=Sony+FE+50mm+f1.2+GM",
+    "history": {
+      "1M": [2399, 2350, 2299],
+      "6M": [2499, 2399, 2350, 2299],
+      "1Y": [2599, 2499, 2399, 2299],
+      "ALL": [2699, 2599, 2399, 2299]
+    }
+  },
+  {
+    "id": 6,
+    "name": "AF 35mm F1.8 FE",
+    "brand": "Samyang",
+    "type": "prime",
+    "aperture": "f/1.8",
+    "dxoScore": 30,
+    "newPrice": "299 €",
+    "newPriceVal": 299,
+    "usedPrice": "210 €",
+    "usedPriceVal": 210,
+    "url": "https://www.amazon.fr/s?k=Samyang+AF+35mm+F1.8+FE",
+    "history": {
+      "1M": [310, 305, 299],
+      "6M": [349, 319, 305, 299],
+      "1Y": [379, 349, 319, 299],
+      "ALL": [399, 379, 319, 299]
+    }
+  },
+  {
+    "id": 7,
+    "name": "AF 85mm f/1.4 II FE",
+    "brand": "Viltrox",
+    "type": "prime",
+    "aperture": "f/1.4",
+    "dxoScore": 33,
+    "newPrice": "459 €",
+    "newPriceVal": 459,
+    "usedPrice": "350 €",
+    "usedPriceVal": 350,
+    "url": "https://www.amazon.fr/s?k=Viltrox+AF+85mm+f1.4+II+FE",
+    "history": {
+      "1M": [470, 465, 459],
+      "6M": [499, 479, 465, 459],
+      "1Y": [529, 499, 479, 459],
+      "ALL": [550, 529, 479, 459]
+    }
+  },
+  {
+    "id": 8,
+    "name": "Argus 33mm f/0.95 FF",
+    "brand": "Laowa",
+    "type": "prime",
+    "aperture": "f/0.95",
+    "dxoScore": 29,
+    "newPrice": "499 €",
+    "newPriceVal": 499,
+    "usedPrice": "380 €",
+    "usedPriceVal": 380,
+    "url": "https://www.amazon.fr/s?k=Laowa+Argus+33mm+f0.95+FF+Sony",
+    "history": {
+      "1M": [510, 505, 499],
+      "6M": [549, 529, 505, 499],
+      "1Y": [579, 549, 529, 499],
+      "ALL": [599, 579, 529, 499]
+    }
+  }
+]
