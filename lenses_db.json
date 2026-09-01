@@ -1,154 +1,85 @@
 [
-  {
-    "id": 1,
-    "name": "FE 24-70mm f/2.8 GM II",
-    "brand": "Sony",
-    "type": "zoom",
-    "aperture": "f/2.8",
-    "dxoScore": 34,
-    "newPrice": "2 299 €",
-    "newPriceVal": 2299,
-    "usedPrice": "1 850 €",
-    "usedPriceVal": 1850,
-    "url": "https://www.amazon.fr/s?k=Sony+FE+24-70mm+f2.8+GM+II",
-    "history": {
-      "1M": [2350, 2320, 2299],
-      "6M": [2499, 2450, 2390, 2299],
-      "1Y": [2599, 2499, 2390, 2299],
-      "ALL": [2699, 2599, 2499, 2299]
+    {
+        "name": "Sony FE 24-70mm F2.8 GM II",
+        "brand": "Sony",
+        "ref": "SEL2470GM2",
+        "type": "zoom",
+        "aperture": "f/2.8",
+        "dxoScore": 45,
+        "dxoQual": "Testé",
+        "dxoLink": "https://www.dxomark.com/?s=Sony+FE+24-70mm+F2.8+GM+II",
+        "newPrice": "1499.0 €",
+        "newPriceVal": 1499.0,
+        "usedPrice": "Dès 1199 €",
+        "usedPriceVal": 1199,
+        "url": "https://www.amazon.fr/sspa/click?ie=UTF8&spc=MTozNDY5MTUyODMzODYyNDkwOjE3ODgyMjU4OTE6c3BfYXRmOjMwMDM0MTQ3ODUwOTMzMjo6MDo6&url=%2FSony-SEL2470GM-zoom-FE-24-70%2Fdp%2FB01BUAVMQY%2Fref%3Dsr_1_1_sspa%3Fdib%3DeyJ2IjoiMSJ9.n35xxwSfCHxbtPokk7-7mZDRPI1pEmPEYp9YM-R9uSR0Seouq0tqfb2qWY-XBCvMfN83b1wH_EIP4TQdYpxgnj4y_cCHGovEEEsljfAKEz5h4Kz0HiVuk7IJbbL2Nw4_3IVRorfDwUZ4qu9q734NdkbPqiqU4IQdySxR2jup0LPW5oL3zsn952EEnWm-XldpxZK8eJCE9mRIdwe7hjPXurD1PoyEJ5qjQQ327sm4fTUyq9eD_gKy5VRVJkQ-jCyLPkIGxh-rY_0f5cTe3l7i8LF4b7RxRWQpzInFqjpLGLg.vPmUOvObUhaiAPj198vH3dxQ-3w8OlGz6vb3QT_OWsg%26dib_tag%3Dse%26keywords%3DSony%2BFE%2B24-70mm%2BF2.8%2BGM%2BII%26qid%3D1788225891%26sr%3D8-1-spons%26aref%3Dy2hK6LTlFi%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=y2hK6LTlFi&sp_cr=ZAZ",
+        "prices_by_market": {
+            "US": {
+                "newPrice": "1719.95 $",
+                "newPriceVal": 1719.95,
+                "usedPrice": "Dès 1375 $",
+                "usedPriceVal": 1375,
+                "url": "https://www.amazon.com/sspa/click?ie=UTF8&spc=MTozOTUxNTc2Njk4MjM5Mjk3OjE3ODgyMjU4NjI6c3BfYXRmOjMwMDA2Nzk0NTg5NTUwMjo6MDo6&url=%2FSony-24-70mm-SEL2470GM-Cleaning-Renewed%2Fdp%2FB0B4PR8L1Y%2Fref%3Dsr_1_1_sspa%3Fdib%3DeyJ2IjoiMSJ9.0P1yWnUIA2zMWFY-fdqT0PyGHC4sJguRlKFJZker-c6fE5KgLYaEKEDeKt99l1jd7dYpGwXFVYPlpoSWuCb1_dDFcXTeYACkKAUnCDLwe1fd0yVPwYgqPd9GVNccYMpzwOJPGd4cpECUjEUIRPCEt6Gg7lekxFFckVnIyiBCIxQZk4mUYLIzvhjoQjNiwwt--7JDBam5Kuda08NlEM5-mxPiyylnrgC5Th0ijPP7USw.US804YYwDkGO2YL-0QlJG2hAZJq6YTdf3ZRVRvev9Zg%26dib_tag%3Dse%26keywords%3DSony%2BFE%2B24-70mm%2BF2.8%2BGM%2BII%26qid%3D1788225862%26sbo%3DGW1QB%252BmqAsHTPf1jTZRSDA%253D%253D%26sr%3D8-1-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1"
+            },
+            "DE": {
+                "newPrice": "2299.0 €",
+                "newPriceVal": 2299.0,
+                "usedPrice": "Dès 1839 €",
+                "usedPriceVal": 1839,
+                "url": "https://www.amazon.de/Sony-Objektiv-SEL-24-70-2-8/dp/B09Z2C74JK/ref=sr_1_1?dib=eyJ2IjoiMSJ9.G5lnXtkvvU-nNQXW6bvBysdlA4NDOJCK3dNM0T6GqGJhdBAbGdmcWbEFjGohqXml_9igXnVDzc3Pcm6i-wuLh411CVuCi3hybVrUxgFV-UIukzlSmN8KNBSprNlPyu1vRCk_2XsSWSgA1e0eax2eexjO5WpjH7WzFOcIAu_IEdG5QJEELuT0Cs0V-JQhIdE04j4k3kca90C3L5img7ulg7MJYZiQna9HKoXdKeTTDJU.n0vB5FE7D8N7GBliL7J39Sgej5TFiy4jQFMzf497Xdw&dib_tag=se&keywords=Sony+FE+24-70mm+F2.8+GM+II&qid=1788225877&sr=8-1"
+            },
+            "ES": {
+                "newPrice": "2299.0 €",
+                "newPriceVal": 2299.0,
+                "usedPrice": "Dès 1839 €",
+                "usedPriceVal": 1839,
+                "url": "https://www.amazon.es/SONY-Objectif-Sel-24-70mm-2-8/dp/B09Z2C74JK/ref=sr_1_1?dib=eyJ2IjoiMSJ9.G5lnXtkvvU-nNQXW6bvByplmqeg0wsq4cn7j0phuTO5fF4QPLFkKheEbD-TkU_dEuNt1C99rTS5cqKKAUCw2KB6a9oOSwZ1LJ_RDeaiOGeQVqWZwRwwiUL9HZ12KVuPtnu3cw8gKQJaVWFgzzHdWqW9ue5r-Qf5nD40QY33hL9DwKlxRpy3p2xpgTknNTANcTcqmWPL4Q5FR_agdrUJl5YnAQ0HfZ69BZZlou6N0GMfoZgUoqrTfqdPt3P6uykPQSzFZ27UzwI_5Fkr-gne2CGsZSOrtPA3NQLV3MKwvtHY.3rvX-CF9G608LxlX35PjTJ6FKMiIL5wGVTHDroXzf6s&dib_tag=se&keywords=Sony+FE+24-70mm+F2.8+GM+II&qid=1788225884&sr=8-1"
+            },
+            "FR": {
+                "newPrice": "1499.0 €",
+                "newPriceVal": 1499.0,
+                "usedPrice": "Dès 1199 €",
+                "usedPriceVal": 1199,
+                "url": "https://www.amazon.fr/sspa/click?ie=UTF8&spc=MTozNDY5MTUyODMzODYyNDkwOjE3ODgyMjU4OTE6c3BfYXRmOjMwMDM0MTQ3ODUwOTMzMjo6MDo6&url=%2FSony-SEL2470GM-zoom-FE-24-70%2Fdp%2FB01BUAVMQY%2Fref%3Dsr_1_1_sspa%3Fdib%3DeyJ2IjoiMSJ9.n35xxwSfCHxbtPokk7-7mZDRPI1pEmPEYp9YM-R9uSR0Seouq0tqfb2qWY-XBCvMfN83b1wH_EIP4TQdYpxgnj4y_cCHGovEEEsljfAKEz5h4Kz0HiVuk7IJbbL2Nw4_3IVRorfDwUZ4qu9q734NdkbPqiqU4IQdySxR2jup0LPW5oL3zsn952EEnWm-XldpxZK8eJCE9mRIdwe7hjPXurD1PoyEJ5qjQQ327sm4fTUyq9eD_gKy5VRVJkQ-jCyLPkIGxh-rY_0f5cTe3l7i8LF4b7RxRWQpzInFqjpLGLg.vPmUOvObUhaiAPj198vH3dxQ-3w8OlGz6vb3QT_OWsg%26dib_tag%3Dse%26keywords%3DSony%2BFE%2B24-70mm%2BF2.8%2BGM%2BII%26qid%3D1788225891%26sr%3D8-1-spons%26aref%3Dy2hK6LTlFi%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=y2hK6LTlFi&sp_cr=ZAZ"
+            },
+            "IT": {
+                "newPrice": "1400.81 €",
+                "newPriceVal": 1400.81,
+                "usedPrice": "Dès 1120 €",
+                "usedPriceVal": 1120,
+                "url": "https://www.amazon.it/Sony-SEL2470GM-reportage-matrimoni-compatibile/dp/B01BUAVMQY/ref=sr_1_1?dib=eyJ2IjoiMSJ9.n35xxwSfCHxbtPokk7-7mdlkkz73qYe6zxYc1VKcJPwwLZhEH6d58kqsoeH355GWkt7S6B_cUQzx2FJQ_w9RypZBwsL6qQNY63DrQaXDIpxM7bgqzZPfXCD0TNMxU_RzRQbpPyKVwpS3umJwPh46q6gNtllaWnRVLUmD4-aqZ5eAAd52pfJkvHTGgxIqPQMLXu9BRxUbhm1xlnb6qqVs47xfweyDCWey5HVvvOif5eYpVZr6ulOKfhoD9GaC_3bveHhuHdZhBWNgiz3N9AddiYppzFJ6JqJ1hh88AfapUng.RY9FDWa5Okyx6vCfx09KmdapSLN8xikafViwVN5NPMY&dib_tag=se&keywords=Sony+FE+24-70mm+F2.8+GM+II&qid=1788225897&sr=8-1"
+            },
+            "AU": {
+                "newPrice": "2388.0 AU$",
+                "newPriceVal": 2388.0,
+                "usedPrice": "Dès 1910 AU$",
+                "usedPriceVal": 1910,
+                "url": "https://www.amazon.com.au/Sony-FE-24-70mm-F2-8-Lens/dp/B09YYY6P98/ref=sr_1_1?dib=eyJ2IjoiMSJ9.yYp7DywunuSBtFCt9Q1gTOVZyvjrrOrBuDiCG2jyyiY9lfylvamxJ6z3ZZcOZ8JhyAyoeqnDBH1r4I9X5F_eYHzjXhmdgNk9CteaPxHJPj_8ro_8i6F9fVNqztqfEiyD1Mv3i-zxHXreq_1R9aMtYE_wRuYe5VL7P_zDhEg0C2E8pTS8ZT7pbns3ufYKG2GuPn-AW1fWSW_-_3Ej229HJ7uJluaCq-X6VREmlVeXtEo53MIRl0EUEIukZdFVf-Gd-PPUceaRRzZW-kbOcq74fxOJd4o8b_h9ZENXai_lcKo.BWU2trMhwS9uq_7DzKH9Wvuuae3VRVHsIDLHd4fD6OA&dib_tag=se&keywords=Sony+FE+24-70mm+F2.8+GM+II&qid=1788225921&sr=8-1"
+            },
+            "IN": {
+                "newPrice": "127490.0 ₹",
+                "newPriceVal": 127490.0,
+                "usedPrice": "Dès 101992 ₹",
+                "usedPriceVal": 101992,
+                "url": "https://www.amazon.in/Sony-SEL2470GM-24-70-Frame-Master/dp/B01BUAVMQY/ref=sr_1_1?dib=eyJ2IjoiMSJ9.3e-JF8N9rQy484uZOZnnyD8Rw40sHa_jdmrRJNPR-ecmJNUOcLuecKUkcrSQExxn5S48N2AKtxPNxznBasa3PFKzQAgEs-fBZh52I_3Z1ftrY8v2rOGp2-u9DVwdrTGWwzex4pzN75OUn8r5EsHdJlhAgmkxedGt5EGVKzjTXuDl9V6IRZgNuB5JiWeK3_m1bWW1uIp51LDijXfYYsSxlDo_KReaLRR1vWojE7x2KdY.-Gl_YinFk4T7A6HP_ixlaSriTV6VANCSFHLHnAr3tuU&dib_tag=se&keywords=Sony+FE+24-70mm+F2.8+GM+II&qid=1788225933&sr=8-1"
+            },
+            "SE": {
+                "newPrice": "17490.0 kr",
+                "newPriceVal": 17490.0,
+                "usedPrice": "Dès 13992 kr",
+                "usedPriceVal": 13992,
+                "url": "https://www.amazon.se/Sony-SEL2470GM-SYX-24-70-Objektiv-Svart/dp/B01BUAVMQY/ref=sr_1_1?dib=eyJ2IjoiMSJ9.n35xxwSfCHxbtPokk7-7mRvFL_R9-1f22jKqR5NL6oZB7rUbXGw_ByY7zuf1030DvsayJfpsfaomJnMe22s-CWVaUo7XssFANb1yO5jTuj87NIpMN6TGnjPuLOS8wwDtRHzuEpr5-uMMBwbc47qbg2Ykc-3qk76i7Fwjg6aB8JMshvHqjm4WCNszh1TbEM77__FqIgNSiulTMsC3s1NDLKwjU-tY-mumXURrIEfkgAN82tU8w2SgvaG0wW6m3aH0lrbmLx21DOHms0buVZcWpXqlz76orURT0J_JcpHWGJA.Vq2xGXxmzIsvV5TQQouW0vEwOJADBfJ4lg9ybzBisEw&dib_tag=se&keywords=Sony+FE+24-70mm+F2.8+GM+II&qid=1788225939&sr=8-1"
+            }
+        },
+        "historyData": {
+            "6M": {
+                "labels": [
+                    "September 2026"
+                ],
+                "prices": [
+                    1499.0
+                ]
+            }
+        }
     }
-  },
-  {
-    "id": 2,
-    "name": "24-70mm F2.8 DG DN | Art",
-    "brand": "Sigma",
-    "type": "zoom",
-    "aperture": "f/2.8",
-    "dxoScore": 33,
-    "newPrice": "1 199 €",
-    "newPriceVal": 1199,
-    "usedPrice": "900 €",
-    "usedPriceVal": 900,
-    "url": "https://www.amazon.fr/s?k=Sigma+24-70mm+F2.8+DG+DN+Art+Sony",
-    "history": {
-      "1M": [1220, 1210, 1199],
-      "6M": [1299, 1249, 1210, 1199],
-      "1Y": [1349, 1299, 1249, 1199],
-      "ALL": [1399, 1349, 1249, 1199]
-    }
-  },
-  {
-    "id": 3,
-    "name": "35mm f/1.4 DG DN | Art",
-    "brand": "Sigma",
-    "type": "prime",
-    "aperture": "f/1.4",
-    "dxoScore": 36,
-    "newPrice": "799 €",
-    "newPriceVal": 799,
-    "usedPrice": "620 €",
-    "usedPriceVal": 620,
-    "url": "https://www.amazon.fr/s?k=Sigma+35mm+f1.4+DG+DN+Art+Sony",
-    "history": {
-      "1M": [820, 810, 799],
-      "6M": [849, 829, 810, 799],
-      "1Y": [899, 849, 829, 799],
-      "ALL": [949, 899, 849, 799]
-    }
-  },
-  {
-    "id": 4,
-    "name": "28-75mm F/2.8 Di III VXD G2",
-    "brand": "Tamron",
-    "type": "zoom",
-    "aperture": "f/2.8",
-    "dxoScore": 32,
-    "newPrice": "849 €",
-    "newPriceVal": 849,
-    "usedPrice": "680 €",
-    "usedPriceVal": 680,
-    "url": "https://www.amazon.fr/s?k=Tamron+28-75mm+F2.8+Di+III+VXD+G2+Sony",
-    "history": {
-      "1M": [869, 855, 849],
-      "6M": [899, 879, 860, 849],
-      "1Y": [929, 899, 879, 849],
-      "ALL": [979, 929, 879, 849]
-    }
-  },
-  {
-    "id": 5,
-    "name": "FE 50mm f/1.2 GM",
-    "brand": "Sony",
-    "type": "prime",
-    "aperture": "f/1.2",
-    "dxoScore": 38,
-    "newPrice": "2 299 €",
-    "newPriceVal": 2299,
-    "usedPrice": "1 890 €",
-    "usedPriceVal": 1890,
-    "url": "https://www.amazon.fr/s?k=Sony+FE+50mm+f1.2+GM",
-    "history": {
-      "1M": [2399, 2350, 2299],
-      "6M": [2499, 2399, 2350, 2299],
-      "1Y": [2599, 2499, 2399, 2299],
-      "ALL": [2699, 2599, 2399, 2299]
-    }
-  },
-  {
-    "id": 6,
-    "name": "AF 35mm F1.8 FE",
-    "brand": "Samyang",
-    "type": "prime",
-    "aperture": "f/1.8",
-    "dxoScore": 30,
-    "newPrice": "299 €",
-    "newPriceVal": 299,
-    "usedPrice": "210 €",
-    "usedPriceVal": 210,
-    "url": "https://www.amazon.fr/s?k=Samyang+AF+35mm+F1.8+FE",
-    "history": {
-      "1M": [310, 305, 299],
-      "6M": [349, 319, 305, 299],
-      "1Y": [379, 349, 319, 299],
-      "ALL": [399, 379, 319, 299]
-    }
-  },
-  {
-    "id": 7,
-    "name": "AF 85mm f/1.4 II FE",
-    "brand": "Viltrox",
-    "type": "prime",
-    "aperture": "f/1.4",
-    "dxoScore": 33,
-    "newPrice": "459 €",
-    "newPriceVal": 459,
-    "usedPrice": "350 €",
-    "usedPriceVal": 350,
-    "url": "https://www.amazon.fr/s?k=Viltrox+AF+85mm+f1.4+II+FE",
-    "history": {
-      "1M": [470, 465, 459],
-      "6M": [499, 479, 465, 459],
-      "1Y": [529, 499, 479, 459],
-      "ALL": [550, 529, 479, 459]
-    }
-  },
-  {
-    "id": 8,
-    "name": "Argus 33mm f/0.95 FF",
-    "brand": "Laowa",
-    "type": "prime",
-    "aperture": "f/0.95",
-    "dxoScore": 29,
-    "newPrice": "499 €",
-    "newPriceVal": 499,
-    "usedPrice": "380 €",
-    "usedPriceVal": 380,
-    "url": "https://www.amazon.fr/s?k=Laowa+Argus+33mm+f0.95+FF+Sony",
-    "history": {
-      "1M": [510, 505, 499],
-      "6M": [549, 529, 505, 499],
-      "1Y": [579, 549, 529, 499],
-      "ALL": [599, 579, 529, 499]
-    }
-  }
 ]
