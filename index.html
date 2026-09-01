@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SonyLensPrice - Comparateur d'objectifs photo Sony & Tiers (DXOMark)</title>
+    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-950 text-gray-100 min-h-screen font-sans flex flex-col justify-between">
+
+    <div>
+        <header class="border-b border-gray-800 bg-gray-900/50 backdrop-blur sticky top-0 z-20">
+            <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+                <h1 class="text-xl font-bold tracking-tight text-orange-500">SonyLens<span class="text-white">Price</span></h1>
+                <span class="text-sm text-gray-400">Optiques Sony & Tiers | Évaluations DXOMark & Amazon</span>
+            </div>
+        </header>
+
+        <main class="max-w-7xl mx-auto px-4 py-8">
+            
+            <!-- Barre de recherche et filtres -->
+            <div class="mb-8 flex flex-col lg:flex-row gap-4 justify-between items-center">
+                <div class="w-full lg:w-72">
+                    <input type="text" id="searchInput" placeholder="Rechercher (ex: Sigma, 24-70)..." 
+                        class="w-full bg-gray-900 border border-gray-800 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-orange-500 transition text-gray-200">
+                </div>
+                
+                <div class="flex flex-wrap gap-4 w-full lg:w-auto justify-between lg:justify-end items-center">
+                    <div class="flex items-center gap-2 bg-gray-900 px-3 py-1.5 border border-gray-800 rounded-lg text-xs">
+                        <span class="text-gray-400 font-medium">Période graphique :</span>
+                        <select id="globalPeriodSelect" onchange="changeGlobalPeriod(this.value)" class="bg-gray-950 text-orange-400 font-semibold border border-gray-800 rounded px-2 py-1 focus:outline-none focus:border-orange-500">
+                            <option value="1M">1 mois</option>
+                            <option value="6M" selected>6 mois</option>
+                            <option value="1Y">1 an</option>
+                            <option value="ALL">Depuis l'origine</option>
+                        </select>
+                    </div>
+
+                    <div class="flex gap-1.5 bg-gray-900 p-1 border border-gray-800 rounded-lg">
+                        <button onclick="filterType('all')" id="btn-type-all" class="px-3 py-1.5 text-xs bg-orange-600 text-white rounded-md transition font-medium">Tous</button>
+                        <button onclick="filterType('zoom')" id="btn-type-zoom" class="px-3 py-1.5 text-xs text-gray-300 hover:text-white rounded-md transition">Zooms</button>
+                        <button onclick="filterType('prime')" id="btn-type-prime" class="px-3 py-1.5 text-xs text-gray-300 hover:text-white rounded-md transition">Fixes</button>
+                    </div>
+
+                    <div class="flex items-center gap-3 bg-gray-900 px-3 py-1.5 border border-gray-800 rounded-lg text-xs flex-wrap">
+                        <span class="text-gray-400 font-medium">Marques :</span>
+                        <label class="flex items-center gap-1.5 cursor-pointer text-gray-200"><input type="checkbox" value="Sony" checked onchange="applyFilters()" class="brand-checkbox rounded bg-gray-800 border-gray-700 text-orange-500 focus:ring-0"> Sony</label>
+                        <label class="flex items-center gap-1.5 cursor-pointer text-gray-200"><input type="checkbox" value="Sigma" checked onchange="applyFilters()" class="brand-checkbox rounded bg-gray-800 border-gray-700 text-orange-500 focus:ring-0"> Sigma</label>
+                        <label class="flex items-center gap-1.5 cursor-pointer text-gray-200"><input type="checkbox" value="Tamron" checked onchange="applyFilters()" class="brand-checkbox rounded bg-gray-800 border-gray-700 text-orange-500 focus:ring-0"> Tamron</label>
+                        <label class="flex items-center gap-1.5 cursor-pointer text-gray-200"><input type="checkbox" value="Samyang" checked onchange="applyFilters()" class="brand-checkbox rounded bg-gray-800 border-gray-700 text-orange-500 focus:ring-0"> Samyang</label>
+                        <label class="flex items-center gap-1.5 cursor-pointer text-gray-200"><input type="checkbox" value="Viltrox" checked onchange="applyFilters()" class="brand-checkbox rounded bg-gray-800 border-gray-700 text-orange-500 focus:ring-0"> Viltrox</label>
+                        <label class="flex items-center gap-1.5 cursor-pointer text-gray-200"><input type="checkbox" value="Laowa" checked onchange="applyFilters()" class="brand-checkbox rounded bg-gray-800 border-gray-700 text-orange-500 focus:ring-0"> Laowa</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tableau comparatif -->
+            <div class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden shadow-xl mb-12">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse min-w-[1200px]">
+                        <thead>
+                            <tr class="border-b border-gray-800 text-xs uppercase tracking-wider text-gray-400 bg-gray-900/80">
+                                <th class="p-4 cursor-pointer hover:text-white transition select-none" onclick="sortData('name')">Objectif <span id="sort-name">⇅</span></th>
+                                <th class="p-4 cursor-pointer hover:text-white transition select-none" onclick="sortData('brand')">Marque <span id="sort-brand">⇅</span></th>
+                                <th class="p-4 cursor-pointer hover:text-white transition select-none" onclick="sortData('type')">Type <span id="sort-type">⇅</span></th>
+                                <th class="p-4 cursor-pointer hover:text-white transition select-none" onclick="sortData('aperture')">Ouverture <span id="sort-aperture">⇅</span></th>
+                                <th class="p-4 cursor-pointer hover:text-white transition select-none" onclick="sortData('dxoScore')">DXO Score <span id="sort-dxoScore">⇅</span></th>
+                                <th class="p-4 cursor-pointer hover:text-white transition select-none" onclick="sortData('newPriceVal')">Neuf (Amazon) <span id="sort-newPriceVal">⇅</span></th>
+                                <th class="p-4 cursor-pointer hover:text-white transition select-none" onclick="sortData('usedPriceVal')">Occasion <span id="sort-usedPriceVal">⇅</span></th>
+                                <th class="p-4 w-64">Évolution Prix</th>
+                                <th class="p-4 text-right">Lien</th>
+                            </tr>
+                        </thead>
+                        <tbody id="lensTableBody" class="divide-y divide-gray-800 text-sm">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Section Newsletter / Alertes -->
+            <section class="bg-gray-900 border border-gray-800 rounded-xl p-6 sm:p-8 max-w-2xl mx-auto text-center shadow-xl">
+                <h2 class="text-lg font-bold text-white mb-2">Restez informé des baisses de prix Amazon</h2>
+                <p class="text-xs text-gray-400 mb-6">Recevez une alerte e-mail dès qu'une baisse de tarif significative est détectée sur ces optiques.</p>
+                <form onsubmit="handleSubscribe(event)" class="flex flex-col sm:flex-row gap-2 justify-center">
+                    <input type="email" id="subscriberEmail" placeholder="Votre adresse e-mail..." required
+                        class="bg-gray-950 border border-gray-800 rounded-lg px-4 py-2 text-sm text-gray-200 focus:outline-none focus:border-orange-500 transition sm:w-72">
+                    <button type="submit" class="bg-orange-600 hover:bg-orange-500 text-white text-xs font-semibold px-5 py-2.5 rounded-lg transition">
+                        S'abonner
+                    </button>
+                </form>
+                <div id="subscribeMessage" class="text-xs text-emerald-400 mt-3 hidden">Inscription enregistrée avec succès !</div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer class="border-t border-gray-800 bg-gray-900/30 text-center py-6 text-xs text-gray-500 mt-12">
+        SonyLensPrice — Données actualisées quotidiennement via scraping (Amazon / DXOMark).
+    </footer>
+
+    <script>
+        let lenses = [];
+        let currentPeriod = '6M';
+        let currentType = 'all';
+        let sortColumn = '';
+        let sortDirection = 'asc';
+
+        async function loadDatabase() {
+            try {
+                const response = await fetch('lenses_db.json');
+                if (!response.ok) throw new Error("Fichier lenses_db.json introuvable");
+                lenses = await response.json();
+                applyFilters();
+            } catch (error) {
+                console.error("Erreur de chargement:", error);
+                document.getElementById('lensTableBody').innerHTML = `
+                    <tr><td colspan="9" class="p-6 text-center text-red-400 text-xs">
+                        Impossible de charger <code>lenses_db.json</code>. Si vous ouvrez le fichier directement en double-cliquant (file://), lancez un petit serveur local (ex: Live Server dans VS Code ou <code>npx http-server</code>).
+                    </td></tr>`;
+            }
+        }
+
+        function renderTable(data) {
+            const tbody = document.getElementById('lensTableBody');
+            tbody.innerHTML = '';
+
+            if (data.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="9" class="p-6 text-center text-gray-500">Aucun objectif ne correspond à vos critères.</td></tr>`;
+                return;
+            }
+
+            data.forEach((lens, index) => {
+                const tr = document.createElement('tr');
+                tr.className = 'hover:bg-gray-900/50 transition';
+                tr.innerHTML = `
+                    <td class="p-4 font-medium text-white">${lens.name}</td>
+                    <td class="p-4 text-gray-300"><span class="px-2 py-1 bg-gray-800 rounded text-xs">${lens.brand}</span></td>
+                    <td class="p-4 text-gray-400 capitalize">${lens.type}</td>
+                    <td class="p-4 text-gray-300 font-mono">${lens.aperture}</td>
+                    <td class="p-4 font-semibold text-orange-400">${lens.dxoScore} / 40</td>
+                    <td class="p-4 font-bold text-gray-100">${lens.newPrice}</td>
+                    <td class="p-4 text-gray-400">${lens.usedPrice}</td>
+                    <td class="p-4 py-2">
+                        <div class="w-48 h-12">
+                            <canvas id="chart-${lens.id}"></canvas>
+                        </div>
+                    </td>
+                    <td class="p-4 text-right">
+                        <a href="${lens.url}" target="_blank" class="inline-block bg-orange-600/20 hover:bg-orange-600 text-orange-400 hover:text-white px-3 py-1.5 rounded-lg text-xs font-semibold transition">
+                            Voir Amazon
+                        </a>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+
+                // Initialiser le mini graphique Chart.js pour chaque ligne
+                setTimeout(() => {
+                    const ctx = document.getElementById(`chart-${lens.id}`).getContext('2d');
+                    const historyData = lens.history[currentPeriod] || lens.history['6M'];
+                    new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: historyData.map((_, i) => `T-${historyData.length - i}`),
+                            datasets: [{
+                                data: historyData,
+                                borderColor: '#f97316',
+                                borderWidth: 2,
+                                pointRadius: 0,
+                                tension: 0.3,
+                                fill: true,
+                                backgroundColor: 'rgba(249, 115, 22, 0.05)'
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: { legend: { display: false }, tooltip: { enabled: false } },
+                            scales: {
+                                x: { display: false },
+                                y: { display: false }
+                            }
+                        }
+                    });
+                }, 50);
+            });
+        }
+
+        function filterType(type) {
+            currentType = type;
+            document.querySelectorAll('[id^="btn-type-"]').forEach(btn => {
+                btn.className = "px-3 py-1.5 text-xs text-gray-300 hover:text-white rounded-md transition";
+            });
+            document.getElementById(`btn-type-${type}`).className = "px-3 py-1.5 text-xs bg-orange-600 text-white rounded-md transition font-medium";
+            applyFilters();
+        }
+
+        function changeGlobalPeriod(period) {
+            currentPeriod = period;
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const checkedBrands = Array.from(document.querySelectorAll('.brand-checkbox:checked')).map(cb => cb.value.toLowerCase());
+
+            let filtered = lenses.filter(lens => {
+                const matchSearch = lens.name.toLowerCase().includes(query) || lens.brand.toLowerCase().includes(query);
+                const matchType = currentType === 'all' || lens.type.toLowerCase() === currentType;
+                const matchBrand = checkedBrands.includes(lens.brand.toLowerCase());
+                return matchSearch && matchType && matchBrand;
+            });
+
+            if (sortColumn) {
+                filtered.sort((a, b) => {
+                    let valA = a[sortColumn];
+                    let valB = b[sortColumn];
+                    if (typeof valA === 'string') {
+                        valA = valA.toLowerCase();
+                        valB = valB.toLowerCase();
+                    }
+                    if (valA < valB) return sortDirection === 'asc' ? -1 : 1;
+                    if (valA > valB) return sortDirection === 'asc' ? 1 : -1;
+                    return 0;
+                });
+            }
+
+            renderTable(filtered);
+        }
+
+        function sortData(column) {
+            if (sortColumn === column) {
+                sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+            } else {
+                sortColumn = column;
+                sortDirection = 'asc';
+            }
+            document.querySelectorAll('th span[id^="sort-"]').forEach(el => el.textContent = '⇅');
+            document.getElementById(`sort-${column}`).textContent = sortDirection === 'asc' ? '▲' : '▼';
+            applyFilters();
+        }
+
+        document.getElementById('searchInput').addEventListener('input', applyFilters);
+
+        function handleSubscribe(e) {
+            e.preventDefault();
+            const emailInput = document.getElementById('subscriberEmail');
+            const msg = document.getElementById('subscribeMessage');
+            if (emailInput.value) {
+                msg.classList.remove('hidden');
+                emailInput.value = '';
+                setTimeout(() => msg.classList.add('hidden'), 4000);
+            }
+        }
+
+        // Chargement initial au démarrage
+        loadDatabase();
+    </script>
+</body>
+</html>
